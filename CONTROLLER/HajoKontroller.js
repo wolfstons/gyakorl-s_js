@@ -1,6 +1,7 @@
 import Hajomodell from "../MODELL/HajoModell.js";
 import Hajok from "../VIEW/Hajok.js";
 import HajoTeljes from "../VIEW/HajoTeljes.js";
+import Hajo from "../VIEW/Hajo.js";
 
 export default class HajoKontroller {
     /*feladata a kapcsolat tartás a wiev közötti kapcsolat tartás
@@ -38,8 +39,9 @@ export default class HajoKontroller {
 
         window.addEventListener("kosárba", (e) => {
             console.log(e.detail);
+            this.#hajoModell.kosarba(e.detail);
             this.KOSARELEM.innerHTML = "";
-            new Hajo(e.detail, this.KOSARELEM);
+            new Hajok(this.#hajoModell.getKosar(), this.KOSARELEM);
         });
     }
 }

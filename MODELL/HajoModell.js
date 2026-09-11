@@ -1,6 +1,7 @@
 import { HAJOLISTA } from "./adatok.js"
 export default class Hajomodell{
     #lista=[]
+    #kosar=[]
 
     constructor() {
         this.#lista = HAJOLISTA;
@@ -27,6 +28,16 @@ export default class Hajomodell{
 
         return this.#lista.find((elem)=>{
             return elem.id===id});
+    }
+    /* kosarba 
+    
+    getKosar */
+    kosarba(elem){
+        this.#kosar.push(elem);
+        return this.#kosar;
+    }
+    getKosar(){
+        return this.#kosar;
     }
 }
     

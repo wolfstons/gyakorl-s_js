@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 255, 0.548);
+  
+}
+nav ul li {
+  padding: 10pt;
+  text-align: center;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li :hover {
+  background-color: red;
+}
+nav ul li a:hover {
+  color: white;
+} 
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+div {
+  padding: 10pt;
+  border: 1px solid black;
+  margin: 10pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  text-align: center;
+  padding: 10pt;
+  background-color: #f1f1f1;
+}

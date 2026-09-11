@@ -11,11 +11,22 @@ export default class Hajomodell{
     }
     rendezLista(){
         /*név szerint abc */
-        return this.rendezettlista=this.#lista.sort((a, b) => a.nev.localeCompare(b.nev))
+        return this.rendezettlista=this.#lista.sort((a, b) =>{
+           /*  if (a.nev < b.nev) {
+                return -1;
+            }
+            return 1;*/
+            return a>b ? 1 : -1
+        });
     }
     szurtLista(){
-        const SZURT=[]
-        return SZURT=this.#lista.filter((elem)=>elem.valodi==true)
+        const SZURT=this.#lista.filter((elem)=>elem.valodi==false);
+        return SZURT
+    }
+    getAdat(id){
+
+        return this.#lista.find((elem)=>{
+            return elem.id===id});
     }
 }
     
